@@ -1,22 +1,36 @@
-export default function Navabr() {
+import Link from "next/link";
+import React from "react";
+
+export default function Navbar() {
   return (
-   <>
-      <div className=" bg-sky-400">
-        <div className="py-5 pl-50 font-sans text-white text-4xl ">
-          SURUWAT.
+    <>
+      <div className=" bg-slate-300 w-auto h-20 m-2">
+        <div className="flex flex-row">
+          <div className="basis-1/7 text-black font-bold text-2xl py-10 pr-10">
+            <Link href="/" >
+            Home
+            </Link>
+          </div>
+          <div className="basis-1/7 text-black font-bold text-2xl py-10 pr-10">
+            <Link href="/about" >
+            About
+            </Link>
+          </div>
+          <div className="basis-1/7 text-black font-bold text-2xl py-10 pr-40">
+            <Link href="/help" >
+            Help
+            </Link>
+          </div>
+          <div className="basis-2/5 text-black text-xl py-10 pr-10">
+            <div className="bg-white text-center">Search the data</div>
+          </div>
+          <div className=" py-10">
+            <button className="border border-black rounded-2xl font-bold pr-4 pl-4 flex flex-row-reverse">
+              Profile
+            </button>
+          </div>
         </div>
-        <div className="text-center text-4xl font-bold p-3 italic underline underline-offset-1 flex justify-around">
-          My First React Project of Tailwind
-        </div>
       </div>
-      <div className="text-left">
-       thi is me okay!!!!
-      </div>
-      <div className="text-right">
-        {
-          "Today, we are here to show our first step of using css. I used 'text-center' alignment to start my heading from the center of my page. And, I used 'text-right'alignment to start my first ltter of second paragraph from right side."
-        }
-      </div>
-      </>
+    </>
   );
 }
